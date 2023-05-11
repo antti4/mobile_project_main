@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var workAround = WorkAround()
-    let myURL = "https://dummyjson.com/users"
+    let myURL = "https://dummyjson.com/users/"
     var body: some View {
         VStack() {
-            FindAllButton(workAround: workAround)
+            FindAllButton(workAround: workAround, myURL: myURL)
             FindByIdButton(workAround: workAround)
             PostButton(workAround: workAround)
         }
