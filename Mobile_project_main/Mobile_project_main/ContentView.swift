@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var workAround = WorkAround()
+    let myURL = "https://dummyjson.com/users"
     var body: some View {
-        VStack {
-            
+        NavigationStack() {
+            if (workAround.users == nil) {
+                ProgressView().onAppear(){
+                    fetchData(workAround : workAround, url : myURL)
+                }
+            }else{
+                List{
+                    ForEach(workAround.users!, id: \.firstName) { user in
+                        Text("\(user.firstName) \(user.lastName)")
+                                    .padding()
+                                    .cornerRadius(20)
+                    }
+                }.navigationTitle("Dummy API")
+            }
         }
+        .padding()
     }
 }
 
