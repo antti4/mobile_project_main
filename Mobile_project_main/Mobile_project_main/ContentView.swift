@@ -13,7 +13,12 @@ struct ContentView: View {
     var body: some View {
         VStack() {
             FindAllButton(workAround: workAround, myURL: myURL)
-            FindByIdButton(workAround: workAround)
+            FindByIdButton(workAround: workAround, myURL: myURL)
+            Spacer()
+            HStack{
+                UpdateButton(workAround: workAround)
+                DeleteButton(workAround: workAround)
+            }
             PostButton(workAround: workAround)
         }
         .navigationTitle("Dummy API")

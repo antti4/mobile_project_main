@@ -10,6 +10,8 @@ import Foundation
 class WorkAround : ObservableObject {
     @Published var buttonNumber = 0
     @Published var users : Array<Users>? = nil
+    @Published var user : Users? = nil
+    @Published var notFound : Bool = true
     struct Result: Decodable  {
         let users : [Users]
     }

@@ -10,11 +10,11 @@ import SwiftUI
 
 struct FindByIdButton: View {
     @ObservedObject var workAround : WorkAround
-    let myURL = "https://dummyjson.com/users/"
+    let myURL : String
     @State private var bind : Int = 1
     var body: some View {
         VStack {
-            if (workAround.users == nil) {
+            if (workAround.notFound) {
                 TextField(
                         "place id",
                         value: $bind,
@@ -22,21 +22,20 @@ struct FindByIdButton: View {
                     )
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
+                Spacer()
+                    .frame(height: 30)
                 Button("Search by id"){
-                    fetchData(workAround : workAround, url : "\(myURL)")
+                    fetchDataById(workAround : workAround, url : "\(myURL)\(bind)")
                     workAround.buttonNumber = 2
                 }
+                Spacer()
             }else if(workAround.buttonNumber == 2){
-                List{
-                    ForEach(workAround.users!, id: \.firstName) { user in
-                        if(Int(user.id) == bind){
-                            Text("\(user.firstName) \(user.lastName)")
-                                .padding()
-                                .cornerRadius(20)
-                        }
-                    }
-                }
+                Spacer()
+                Text("\(workAround.user!.firstName) \(workAround.user!.lastName)")
+                    .padding()
+                    .cornerRadius(20)
                 BackButton(workAround: workAround)
+                Spacer()
             }
         }
         .padding()

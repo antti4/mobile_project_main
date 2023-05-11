@@ -13,6 +13,7 @@ struct BackButton: View {
     var body: some View {
         Button("back"){
             workAround.buttonNumber = 0
+            workAround.notFound = true
         }
         .padding()
     }
