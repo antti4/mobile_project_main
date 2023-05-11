@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FindAllButton: View {
-    @StateObject var workAround = WorkAround()
+    @ObservedObject var workAround = WorkAround()
     let myURL = "https://dummyjson.com/users"
     var buttonPressed = false
     var body: some View {
@@ -17,8 +17,9 @@ struct FindAllButton: View {
             if (workAround.users == nil) {
                 Button("Search"){
                     fetchData(workAround : workAround, url : myURL)
+                    workAround.buttonNumber = 1
                 }
-            }else{
+            }else if(workAround.buttonNumber == 1){
                 List{
                     ForEach(workAround.users!, id: \.firstName) { user in
                         Text("\(user.firstName) \(user.lastName)")
@@ -26,6 +27,7 @@ struct FindAllButton: View {
                             .cornerRadius(20)
                     }
                 }
+                BackButton(workAround: workAround)
             }
         }
         .padding()
