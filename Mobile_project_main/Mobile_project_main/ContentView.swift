@@ -11,16 +11,27 @@ struct ContentView: View {
     @StateObject var workAround = WorkAround()
     let myURL = "https://dummyjson.com/users/"
     var body: some View {
-        VStack() {
-            FindAllButton(workAround: workAround, myURL: myURL)
-            FindByIdButton(workAround: workAround, myURL: myURL)
-            Spacer()
-            UpdateButton(workAround: workAround, myURL: myURL)
-            DeleteButton(workAround: workAround, myURL: myURL)
-            PostButton(workAround: workAround, myURL: myURL)
+        NavigationStack{
+            List{
+                NavigationLink("see all"){
+                    FindAllButton(workAround: workAround, myURL: myURL)
+                }
+                NavigationLink("find user"){
+                    FindByIdButton(workAround: workAround, myURL: myURL)
+                }
+                NavigationLink("udate user"){
+                    UpdateButton(workAround: workAround, myURL: myURL)
+                }
+                NavigationLink("delete user"){
+                    DeleteButton(workAround: workAround, myURL: myURL)
+                }
+                NavigationLink("create user"){
+                    PostButton(workAround: workAround, myURL: myURL)
+                }
+            }
         }
         .navigationTitle("Dummy API")
-        }
     }
+}
 
 
