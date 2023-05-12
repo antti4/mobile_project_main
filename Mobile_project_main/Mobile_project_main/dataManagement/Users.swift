@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Users : Decodable {
+struct Users : Decodable, Identifiable, Hashable {
     var id : Int
     var firstName : String
     var lastName : String

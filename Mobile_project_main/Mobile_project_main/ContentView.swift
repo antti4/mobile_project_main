@@ -15,11 +15,9 @@ struct ContentView: View {
             FindAllButton(workAround: workAround, myURL: myURL)
             FindByIdButton(workAround: workAround, myURL: myURL)
             Spacer()
-            HStack{
-                UpdateButton(workAround: workAround)
-                DeleteButton(workAround: workAround)
-            }
-            PostButton(workAround: workAround)
+            UpdateButton(workAround: workAround, myURL: myURL)
+            DeleteButton(workAround: workAround, myURL: myURL)
+            PostButton(workAround: workAround, myURL: myURL)
         }
         .navigationTitle("Dummy API")
         }

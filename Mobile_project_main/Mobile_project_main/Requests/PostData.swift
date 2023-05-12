@@ -15,9 +15,8 @@ func postData(user:Users, url: String) {
     
         //Make JSON to send to send to server
         var json = [String:Any]()
-    json[String(user.id)] = user.id
-    json[user.firstName] = user.firstName
-    json[user.lastName] = user.lastName
+        json["firstName"] = user.firstName
+        json["lastName"] = user.lastName
         
         do {
             let data = try JSONSerialization.data(withJSONObject: json, options: [])
@@ -27,13 +26,17 @@ func postData(user:Users, url: String) {
             request.httpBody = data
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
-            let HTTPtask = URLSession.shared.dataTask(with: request){
+            let httpTask = URLSession.shared.dataTask(with: request){
                 (optionalData, response, error) in
-                if let x = response {
-                    print(x)
+                let jsonDecoder = JSONDecoder()
+                do {
+                    let result = try jsonDecoder.decode(Users.self, from: optionalData!)
+                        print(result)
+                } catch {
+                    print(error)
                 }
             }
-            HTTPtask.resume()
+            httpTask.resume()
         }catch{
             print(error)
         }

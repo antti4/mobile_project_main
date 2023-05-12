@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PostButton: View {
     @ObservedObject var workAround = WorkAround()
+    let myURL : String
     @State var id : String = ""
     @State var firstName : String = ""
     @State var lastName : String  = ""
@@ -28,7 +29,7 @@ struct PostButton: View {
         .padding()
         Button("Post"){
             let postRequest : Users = Users(id: Int(id) ?? 0, firstName: firstName, lastName: lastName)
-            postData(user: postRequest, url: "https://dummyjson.com/users/")
+            postData(user: postRequest, url: "\(myURL)add")
         }
     }
 }
