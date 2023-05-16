@@ -21,7 +21,6 @@ struct FindAllView: View {
                         .cornerRadius(20)
                 }
             }
-            BackButton(workAround: workAround)
         }
     }
 }

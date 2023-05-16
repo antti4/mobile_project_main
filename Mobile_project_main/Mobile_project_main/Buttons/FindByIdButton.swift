@@ -14,6 +14,7 @@ struct FindByIdButton: View {
     @State private var bind : Int = 1
     var body: some View {
         Button("find user"){
+            workAround.notFound = true
             workAround.buttonNumber = 2
         }
         .padding()

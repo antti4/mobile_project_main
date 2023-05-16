@@ -19,6 +19,8 @@ struct ContentView: View {
                     FindAllView(workAround: workAround)
                 case 2:
                     FindByIdView(workAround: workAround)
+                case 3:
+                    UpdateView(workAround: workAround)
                 default:
                     Text("welcome to users API! Let's get started")
                 }
@@ -27,9 +29,7 @@ struct ContentView: View {
                     HStack{
                         FindAllButton(workAround: workAround, myURL: myURL)
                         FindByIdButton(workAround: workAround, myURL: myURL)
-                        NavigationLink("udate user"){
-                            UpdateButton(workAround: workAround, myURL: myURL)
-                        }
+                        UpdateButton(workAround: workAround)
                         NavigationLink("delete user"){
                             DeleteButton(workAround: workAround, myURL: myURL)
                         }

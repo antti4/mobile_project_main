@@ -33,7 +33,6 @@ struct FindByIdView: View {
                         .cornerRadius(20)
                 }
             }
-            BackButton(workAround: workAround)
             Spacer()
         }
     }
