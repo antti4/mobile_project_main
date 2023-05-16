@@ -21,6 +21,8 @@ struct ContentView: View {
                     FindByIdView(workAround: workAround)
                 case 3:
                     UpdateView(workAround: workAround)
+                case 4:
+                    DeleteView(workAround: workAround)
                 default:
                     Text("welcome to users API! Let's get started")
                 }
@@ -30,9 +32,7 @@ struct ContentView: View {
                         FindAllButton(workAround: workAround, myURL: myURL)
                         FindByIdButton(workAround: workAround, myURL: myURL)
                         UpdateButton(workAround: workAround)
-                        NavigationLink("delete user"){
-                            DeleteButton(workAround: workAround, myURL: myURL)
-                        }
+                        DeleteButton(workAround: workAround)
                         NavigationLink("create user"){
                             PostButton(workAround: workAround, myURL: myURL)
                         }
