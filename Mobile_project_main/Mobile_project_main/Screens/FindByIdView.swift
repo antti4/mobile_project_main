@@ -10,28 +10,31 @@ import SwiftUI
 
 struct FindByIdView: View {
     @ObservedObject var workAround = WorkAround()
-    @State var bind : Int = 0
+    @State var bind : String = ""
     var body: some View {
             TextField(
-                    "place id",
-                    value: $bind,
-                    formatter: NumberFormatter()
+                    "write name",
+                    text: $bind
                 )
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
             Spacer()
                 .frame(height: 30)
             Button("Search by id"){
-                fetchDataById(workAround : workAround, url : "\(workAround.myUrl)\(bind)")
+                fetchDataById(workAround : workAround, url : "\(workAround.myUrl)search?q=\(bind)")
             }
             Spacer()
         if(!workAround.notFound){
                Spacer()
-               Text("\(workAround.user!.firstName) \(workAround.user!.lastName)")
-                   .padding()
-                   .cornerRadius(20)
-               BackButton(workAround: workAround)
-               Spacer()
+            List{
+                ForEach(workAround.users!, id: \.firstName) { user in
+                    Text("\(user.id) | \(user.firstName) \(user.lastName) ")
+                        .padding()
+                        .cornerRadius(20)
+                }
+            }
+            BackButton(workAround: workAround)
+            Spacer()
         }
     }
 }

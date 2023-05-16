@@ -13,11 +13,10 @@ struct FindAllButton: View {
     let myURL : String
     var body: some View {
         VStack {
-            if (workAround.notFound) {
-                Button("Search all"){
-                    fetchData(workAround : workAround, url : myURL)
-                    workAround.buttonNumber = 1
-                }
+            Button("Search all"){
+                workAround.notFound = true
+                fetchData(workAround : workAround, url : myURL)
+                workAround.buttonNumber = 1
             }
         }
         .padding()

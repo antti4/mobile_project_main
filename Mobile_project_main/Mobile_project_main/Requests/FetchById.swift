@@ -13,9 +13,9 @@ func fetchDataById(workAround : WorkAround, url : String){
      (optionalData, response, error) in
         let jsonDecoder = JSONDecoder()
             do {
-                let result = try jsonDecoder.decode(Users.self, from: optionalData!)
+                let result = try jsonDecoder.decode(WorkAround.Result.self, from: optionalData!)
                 DispatchQueue.main.async() {
-                    workAround.user = result
+                    workAround.users = result.users
                     workAround.notFound = false
                 }
             } catch {
