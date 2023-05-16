@@ -12,6 +12,7 @@ class WorkAround : ObservableObject {
     @Published var users : Array<Users>? = nil
     @Published var user : Users? = nil
     @Published var notFound : Bool = true
+    @Published var myUrl : String = "https://dummyjson.com/users/"
     struct Result: Decodable  {
         let users : [Users]
     }

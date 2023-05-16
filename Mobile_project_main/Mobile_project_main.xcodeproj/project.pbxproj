@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795463FC2A136BB700B59450 /* FindAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FB2A136BB700B59450 /* FindAllView.swift */; };
+		795463FE2A136F5200B59450 /* FindByIdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FD2A136F5200B59450 /* FindByIdView.swift */; };
+		795464002A13753700B59450 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FF2A13753700B59450 /* UpdateView.swift */; };
 		797664AB2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */; };
 		797664AD2A0CC93F0048F1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AC2A0CC93F0048F1C4 /* ContentView.swift */; };
 		797664AF2A0CC9400048F1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797664AE2A0CC9400048F1C4 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		795463FB2A136BB700B59450 /* FindAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAllView.swift; sourceTree = "<group>"; };
+		795463FD2A136F5200B59450 /* FindByIdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIdView.swift; sourceTree = "<group>"; };
+		795463FF2A13753700B59450 /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		797664A72A0CC93F0048F1C4 /* Mobile_project_main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobile_project_main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_project_mainApp.swift; sourceTree = "<group>"; };
 		797664AC2A0CC93F0048F1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795463FA2A136B9300B59450 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				795463FD2A136F5200B59450 /* FindByIdView.swift */,
+				795463FB2A136BB700B59450 /* FindAllView.swift */,
+				795463FF2A13753700B59450 /* UpdateView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		7976649E2A0CC93F0048F1C4 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +136,7 @@
 		797664A92A0CC93F0048F1C4 /* Mobile_project_main */ = {
 			isa = PBXGroup;
 			children = (
+				795463FA2A136B9300B59450 /* Screens */,
 				797664E72A0CF8D80048F1C4 /* Requests */,
 				797664E62A0CF8B00048F1C4 /* dataManagement */,
 				797664E52A0CF85B0048F1C4 /* Buttons */,
@@ -321,12 +338,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				797664F12A0D0CD30048F1C4 /* DeleteData.swift in Sources */,
+				795463FC2A136BB700B59450 /* FindAllView.swift in Sources */,
 				797664E92A0D02640048F1C4 /* FetchById.swift in Sources */,
 				797664E02A0CE31D0048F1C4 /* backButton.swift in Sources */,
 				797664E22A0CE5560048F1C4 /* PostData.swift in Sources */,
 				797664AD2A0CC93F0048F1C4 /* ContentView.swift in Sources */,
 				797664EB2A0D0A110048F1C4 /* UpdateByIdButton.swift in Sources */,
+				795464002A13753700B59450 /* UpdateView.swift in Sources */,
 				797664E42A0CE9B50048F1C4 /* PostButton.swift in Sources */,
+				795463FE2A136F5200B59450 /* FindByIdView.swift in Sources */,
 				797664ED2A0D0A210048F1C4 /* DeleteByIdButton.swift in Sources */,
 				797664AB2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift in Sources */,
 				797664DA2A0CCFE50048F1C4 /* Users.swift in Sources */,

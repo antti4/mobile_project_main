@@ -14,20 +14,10 @@ struct FindAllButton: View {
     var body: some View {
         VStack {
             if (workAround.notFound) {
-                Spacer()
                 Button("Search all"){
                     fetchData(workAround : workAround, url : myURL)
                     workAround.buttonNumber = 1
                 }
-            }else if(workAround.buttonNumber == 1){
-                List{
-                    ForEach(workAround.users!, id: \.firstName) { user in
-                        Text("\(user.id) | \(user.firstName) \(user.lastName) ")
-                            .padding()
-                            .cornerRadius(20)
-                    }
-                }
-                BackButton(workAround: workAround)
             }
         }
         .padding()

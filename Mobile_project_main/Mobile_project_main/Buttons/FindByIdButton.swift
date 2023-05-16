@@ -13,30 +13,8 @@ struct FindByIdButton: View {
     let myURL : String
     @State private var bind : Int = 1
     var body: some View {
-        VStack {
-            if (workAround.notFound) {
-                TextField(
-                        "place id",
-                        value: $bind,
-                        formatter: NumberFormatter()
-                    )
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
-                Spacer()
-                    .frame(height: 30)
-                Button("Search by id"){
-                    fetchDataById(workAround : workAround, url : "\(myURL)\(bind)")
-                    workAround.buttonNumber = 2
-                }
-                Spacer()
-            }else if(workAround.buttonNumber == 2){
-                Spacer()
-                Text("\(workAround.user!.firstName) \(workAround.user!.lastName)")
-                    .padding()
-                    .cornerRadius(20)
-                BackButton(workAround: workAround)
-                Spacer()
-            }
+        Button("find user"){
+            workAround.buttonNumber = 2
         }
         .padding()
     }

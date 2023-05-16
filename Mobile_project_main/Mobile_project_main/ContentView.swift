@@ -11,26 +11,37 @@ struct ContentView: View {
     @StateObject var workAround = WorkAround()
     let myURL = "https://dummyjson.com/users/"
     var body: some View {
-        NavigationStack{
-            List{
-                NavigationLink("see all"){
-                    FindAllButton(workAround: workAround, myURL: myURL)
+        NavigationView{
+            VStack{
+                Spacer()
+                switch workAround.buttonNumber {
+                case 1:
+                    FindAllView(workAround: workAround)
+                case 2:
+                    FindByIdView(workAround: workAround)
+                default:
+                    Text("welcome to users API! Let's get started")
                 }
-                NavigationLink("find user"){
-                    FindByIdButton(workAround: workAround, myURL: myURL)
-                }
-                NavigationLink("udate user"){
-                    UpdateButton(workAround: workAround, myURL: myURL)
-                }
-                NavigationLink("delete user"){
-                    DeleteButton(workAround: workAround, myURL: myURL)
-                }
-                NavigationLink("create user"){
-                    PostButton(workAround: workAround, myURL: myURL)
+                Spacer()
+                ScrollView(.horizontal,showsIndicators: false){
+                    HStack{
+                        FindAllButton(workAround: workAround, myURL: myURL)
+                        FindByIdButton(workAround: workAround, myURL: myURL)
+                        NavigationLink("udate user"){
+                            UpdateButton(workAround: workAround, myURL: myURL)
+                        }
+                        NavigationLink("delete user"){
+                            DeleteButton(workAround: workAround, myURL: myURL)
+                        }
+                        NavigationLink("create user"){
+                            PostButton(workAround: workAround, myURL: myURL)
+                        }
+                    }
                 }
             }
+            .padding(.leading, 10)
+            .navigationBarTitle("Users", displayMode: .large)
         }
-        .navigationTitle("Dummy API")
     }
 }
 
