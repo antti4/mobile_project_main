@@ -18,6 +18,7 @@ struct FindAllButton: View {
                 fetchData(workAround : workAround, url : myURL)
                 workAround.buttonNumber = 1
             }
+            .frame(maxWidth: .infinity)
         }
         .padding()
     }

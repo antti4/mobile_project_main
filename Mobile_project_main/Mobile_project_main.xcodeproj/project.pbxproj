@@ -12,6 +12,7 @@
 		795464002A13753700B59450 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FF2A13753700B59450 /* UpdateView.swift */; };
 		795464022A13824B00B59450 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795464012A13824B00B59450 /* DeleteView.swift */; };
 		795464042A1383B000B59450 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795464032A1383B000B59450 /* PostView.swift */; };
+		795464062A138D5900B59450 /* EditBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795464052A138D5900B59450 /* EditBackend.swift */; };
 		797664AB2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */; };
 		797664AD2A0CC93F0048F1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AC2A0CC93F0048F1C4 /* ContentView.swift */; };
 		797664AF2A0CC9400048F1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797664AE2A0CC9400048F1C4 /* Assets.xcassets */; };
@@ -24,12 +25,9 @@
 		797664DA2A0CCFE50048F1C4 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664D92A0CCFE40048F1C4 /* Users.swift */; };
 		797664DC2A0CD12C0048F1C4 /* findAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664DB2A0CD12C0048F1C4 /* findAllButton.swift */; };
 		797664DE2A0CD6BE0048F1C4 /* FindByIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664DD2A0CD6BE0048F1C4 /* FindByIdButton.swift */; };
-		797664E02A0CE31D0048F1C4 /* backButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664DF2A0CE31D0048F1C4 /* backButton.swift */; };
 		797664E22A0CE5560048F1C4 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664E12A0CE5560048F1C4 /* PostData.swift */; };
-		797664E42A0CE9B50048F1C4 /* PostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664E32A0CE9B50048F1C4 /* PostButton.swift */; };
 		797664E92A0D02640048F1C4 /* FetchById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664E82A0D02640048F1C4 /* FetchById.swift */; };
 		797664EB2A0D0A110048F1C4 /* UpdateByIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664EA2A0D0A110048F1C4 /* UpdateByIdButton.swift */; };
-		797664ED2A0D0A210048F1C4 /* DeleteByIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664EC2A0D0A210048F1C4 /* DeleteByIdButton.swift */; };
 		797664EF2A0D0CC70048F1C4 /* PutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664EE2A0D0CC70048F1C4 /* PutData.swift */; };
 		797664F12A0D0CD30048F1C4 /* DeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664F02A0D0CD30048F1C4 /* DeleteData.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +55,7 @@
 		795463FF2A13753700B59450 /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		795464012A13824B00B59450 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
 		795464032A1383B000B59450 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		795464052A138D5900B59450 /* EditBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBackend.swift; sourceTree = "<group>"; };
 		797664A72A0CC93F0048F1C4 /* Mobile_project_main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobile_project_main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_project_mainApp.swift; sourceTree = "<group>"; };
 		797664AC2A0CC93F0048F1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,12 +71,9 @@
 		797664D92A0CCFE40048F1C4 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		797664DB2A0CD12C0048F1C4 /* findAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findAllButton.swift; sourceTree = "<group>"; };
 		797664DD2A0CD6BE0048F1C4 /* FindByIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIdButton.swift; sourceTree = "<group>"; };
-		797664DF2A0CE31D0048F1C4 /* backButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backButton.swift; sourceTree = "<group>"; };
 		797664E12A0CE5560048F1C4 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		797664E32A0CE9B50048F1C4 /* PostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostButton.swift; sourceTree = "<group>"; };
 		797664E82A0D02640048F1C4 /* FetchById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchById.swift; sourceTree = "<group>"; };
 		797664EA2A0D0A110048F1C4 /* UpdateByIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateByIdButton.swift; sourceTree = "<group>"; };
-		797664EC2A0D0A210048F1C4 /* DeleteByIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteByIdButton.swift; sourceTree = "<group>"; };
 		797664EE2A0D0CC70048F1C4 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		797664F02A0D0CD30048F1C4 /* DeleteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +111,7 @@
 				795463FF2A13753700B59450 /* UpdateView.swift */,
 				795464012A13824B00B59450 /* DeleteView.swift */,
 				795464032A1383B000B59450 /* PostView.swift */,
+				795464052A138D5900B59450 /* EditBackend.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -184,10 +181,7 @@
 			children = (
 				797664DB2A0CD12C0048F1C4 /* findAllButton.swift */,
 				797664DD2A0CD6BE0048F1C4 /* FindByIdButton.swift */,
-				797664E32A0CE9B50048F1C4 /* PostButton.swift */,
-				797664DF2A0CE31D0048F1C4 /* backButton.swift */,
 				797664EA2A0D0A110048F1C4 /* UpdateByIdButton.swift */,
-				797664EC2A0D0A210048F1C4 /* DeleteByIdButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -346,17 +340,15 @@
 				797664F12A0D0CD30048F1C4 /* DeleteData.swift in Sources */,
 				795463FC2A136BB700B59450 /* FindAllView.swift in Sources */,
 				797664E92A0D02640048F1C4 /* FetchById.swift in Sources */,
-				797664E02A0CE31D0048F1C4 /* backButton.swift in Sources */,
 				797664E22A0CE5560048F1C4 /* PostData.swift in Sources */,
 				797664AD2A0CC93F0048F1C4 /* ContentView.swift in Sources */,
 				797664EB2A0D0A110048F1C4 /* UpdateByIdButton.swift in Sources */,
 				795464002A13753700B59450 /* UpdateView.swift in Sources */,
-				797664E42A0CE9B50048F1C4 /* PostButton.swift in Sources */,
 				795464022A13824B00B59450 /* DeleteView.swift in Sources */,
 				795463FE2A136F5200B59450 /* FindByIdView.swift in Sources */,
-				797664ED2A0D0A210048F1C4 /* DeleteByIdButton.swift in Sources */,
 				797664AB2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift in Sources */,
 				797664DA2A0CCFE50048F1C4 /* Users.swift in Sources */,
+				795464062A138D5900B59450 /* EditBackend.swift in Sources */,
 				797664D52A0CCB280048F1C4 /* fetchData.swift in Sources */,
 				797664DE2A0CD6BE0048F1C4 /* FindByIdButton.swift in Sources */,
 				797664EF2A0D0CC70048F1C4 /* PutData.swift in Sources */,

@@ -16,5 +16,6 @@ struct UpdateButton: View {
             workAround.buttonNumber = 3
         }
         .padding()
+        .frame(maxWidth: .infinity)
     }
 }

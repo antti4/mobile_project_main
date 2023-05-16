@@ -18,5 +18,6 @@ struct FindByIdButton: View {
             workAround.buttonNumber = 2
         }
         .padding()
+        .frame(maxWidth: .infinity)
     }
 }

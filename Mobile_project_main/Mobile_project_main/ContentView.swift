@@ -20,23 +20,15 @@ struct ContentView: View {
                 case 2:
                     FindByIdView(workAround: workAround)
                 case 3:
-                    UpdateView(workAround: workAround)
-                case 4:
-                    DeleteView(workAround: workAround)
-                case 5:
-                    PostView(workAround: workAround)
+                    EditBackend(workAround: workAround)
                 default:
                     Text("welcome to users API! Let's get started")
                 }
                 Spacer()
-                ScrollView(.horizontal,showsIndicators: false){
-                    HStack{
-                        FindAllButton(workAround: workAround, myURL: myURL)
-                        FindByIdButton(workAround: workAround, myURL: myURL)
-                        UpdateButton(workAround: workAround)
-                        DeleteButton(workAround: workAround)
-                        PostButton(workAround: workAround)
-                    }
+                HStack{
+                    FindAllButton(workAround: workAround, myURL: myURL)
+                    FindByIdButton(workAround: workAround, myURL: myURL)
+                    UpdateButton(workAround: workAround)
                 }
             }
             .padding(.leading, 10)

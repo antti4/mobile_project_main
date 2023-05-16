@@ -12,28 +12,19 @@ struct FindByIdView: View {
     @ObservedObject var workAround = WorkAround()
     @State var bind : String = ""
     var body: some View {
-            TextField(
-                    "write name",
-                    text: $bind
-                )
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
-            Spacer()
-                .frame(height: 30)
-            Button("Search by id"){
-                fetchDataById(workAround : workAround, url : "\(workAround.myUrl)search?q=\(bind)")
-            }
-            Spacer()
-        if(!workAround.notFound){
-               Spacer()
             List{
-                ForEach(workAround.users!, id: \.firstName) { user in
-                    Text("\(user.id) | \(user.firstName) \(user.lastName) ")
-                        .padding()
-                        .cornerRadius(20)
+                if(!workAround.notFound){
+                    ForEach(workAround.users!, id: \.firstName) { user in
+                        Text("\(user.id) | \(user.firstName) \(user.lastName) ")
+                            .padding()
+                            .cornerRadius(20)
+                    }
                 }
             }
+            .searchable(text: $bind)
+            .onSubmit(of: .search) {
+              fetchDataById(workAround: workAround, url:"\(workAround.myUrl)search?q=\(bind)")
+            }
             Spacer()
-        }
     }
 }
