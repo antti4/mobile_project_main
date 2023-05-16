@@ -11,6 +11,7 @@
 		795463FE2A136F5200B59450 /* FindByIdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FD2A136F5200B59450 /* FindByIdView.swift */; };
 		795464002A13753700B59450 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795463FF2A13753700B59450 /* UpdateView.swift */; };
 		795464022A13824B00B59450 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795464012A13824B00B59450 /* DeleteView.swift */; };
+		795464042A1383B000B59450 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795464032A1383B000B59450 /* PostView.swift */; };
 		797664AB2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */; };
 		797664AD2A0CC93F0048F1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797664AC2A0CC93F0048F1C4 /* ContentView.swift */; };
 		797664AF2A0CC9400048F1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797664AE2A0CC9400048F1C4 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		795463FD2A136F5200B59450 /* FindByIdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIdView.swift; sourceTree = "<group>"; };
 		795463FF2A13753700B59450 /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		795464012A13824B00B59450 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
+		795464032A1383B000B59450 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		797664A72A0CC93F0048F1C4 /* Mobile_project_main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobile_project_main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797664AA2A0CC93F0048F1C4 /* Mobile_project_mainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_project_mainApp.swift; sourceTree = "<group>"; };
 		797664AC2A0CC93F0048F1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				795463FB2A136BB700B59450 /* FindAllView.swift */,
 				795463FF2A13753700B59450 /* UpdateView.swift */,
 				795464012A13824B00B59450 /* DeleteView.swift */,
+				795464032A1383B000B59450 /* PostView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				797664DE2A0CD6BE0048F1C4 /* FindByIdButton.swift in Sources */,
 				797664EF2A0D0CC70048F1C4 /* PutData.swift in Sources */,
 				797664DC2A0CD12C0048F1C4 /* findAllButton.swift in Sources */,
+				795464042A1383B000B59450 /* PostView.swift in Sources */,
 				797664D72A0CCB5C0048F1C4 /* WorkAround.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
