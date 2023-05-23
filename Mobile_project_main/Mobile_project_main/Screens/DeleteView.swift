@@ -7,7 +7,17 @@
 
 import Foundation
 import SwiftUI
+/**
+ A SwiftUI view for deleting a user.
 
+ The DeleteView displays a text field for entering an ID and a button for deleting a user.
+
+ Within the body of the view:
+ - The TextField and Button are stacked vertically within a VStack
+ - A TextField is displayed for entering a ID. The @State variable bind is bound to the field with
+ - the Button is labeled "Delete" and when tapped, it invokes the deleteData function to delete the user with the specified ID from the backend.
+ - The button and TextField include additional styling options for easier user experience.
+ */
 struct DeleteView: View {
     @ObservedObject var workAround = WorkAround()
     @State var bind : String = ""

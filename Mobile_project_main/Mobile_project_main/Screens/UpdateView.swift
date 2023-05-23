@@ -7,7 +7,18 @@
 
 import Foundation
 import SwiftUI
+/**
+ A SwiftUI view for updating a specific user.
 
+ UdateView  displays text fields for entering an id, a first name and a last name, and a button for updating the user.
+
+ Within the body of the view:
+ - A VStack is used to arrange the three TextFields and a Button vertically.
+ - The three TextField views are displayed for enteringthe id, first name and last name respectively. The variables bindId bindFName and bindLName are bound to the text fields with the @State annotation to capture the entered values.
+ - A Button is labeled "update" and when tapped, it creates Users object using the entered id, first name and last name, and calls the updateData
+ function to send the user data to the specified URL.
+ - The button and TextFields include additional styling options for easier user experience.
+ */
 struct UpdateView: View {
     @ObservedObject var workAround = WorkAround()
     @State var bindId : String = ""

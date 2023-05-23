@@ -7,7 +7,19 @@
 
 import Foundation
 import SwiftUI
+/**
+ A SwiftUI view for searching and displaying a user through a query.
 
+ The FindByIdView displays a list of users based on a search query. The Viev contais a @State property bind that is used for the query
+
+ Within the body of the view:
+ - the results are displayed as a list once found
+ - An if statement is used to check if the users are found (!workAround.notFound).
+ - the found users are diplayed displayed by a foreach loop
+ - Each user is displayed as a Text view showing the user's ID, first name, and last name.
+ - the query body is aquired with a searchable property that is bound to the bind variable
+ - with the .onSubmit modifier the query will start once the search query is submitted
+ */
 struct FindByIdView: View {
     @ObservedObject var workAround = WorkAround()
     @State var bind : String = ""

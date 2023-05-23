@@ -6,14 +6,26 @@
 //
 
 import Foundation
+/**
+ A function for posting data to the specified URL with the given user information.
+
+ The postData function makes a POST request to the specified URL, sending the user information in the request body.
+
+ Within the function:
+ - user information is placed into a json
+ - The json is serialized into JSON data.
+ - A URLRequest is created with the provided URL and set to the POST method.
+ - The "Content-Type" and "Accept" headers are added to the request to indicate that the data is in JSON format.
+ - A URLSession is used to perform the POST request asynchronously.
+ - In the completion handler, a JSONDecoder decodes the response data into a Users object.
+ - the decoded result is printed, and the workAround.showToast property is set to "true" to display a success toast notification.
+ - any error is printed, and the workAround.failedRequestToast property is set to "true" to display a failed request toast notification.
+ - The HTTP task is resumed to initiate the network request.
+ */
 func postData(user:Users, url: String, workAround : WorkAround) {
         
-        // server endpoint
-        let endpoint = url
-        
-        let endpointUrl = URL(string: endpoint)!
+        let endpointUrl = URL(string: url)!
     
-        //Make JSON to send to send to server
         var json = [String:Any]()
         json["firstName"] = user.firstName
         json["lastName"] = user.lastName
