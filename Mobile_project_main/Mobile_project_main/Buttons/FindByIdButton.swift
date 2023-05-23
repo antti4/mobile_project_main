@@ -13,11 +13,15 @@ struct FindByIdButton: View {
     let myURL : String
     @State private var bind : Int = 1
     var body: some View {
-        Button("find user"){
+        Button{
             workAround.notFound = true
             workAround.buttonNumber = 2
+        } label: {
+            Label("Search", systemImage: "magnifyingglass")
+                .foregroundColor(.gray)
+                .imageScale(.large)
         }
-        .padding()
         .frame(maxWidth: .infinity)
+        .padding([.trailing], 30)
     }
 }

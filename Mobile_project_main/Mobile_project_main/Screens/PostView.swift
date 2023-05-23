@@ -24,7 +24,7 @@ struct PostView: View {
         .padding()
         Button("Post"){
             let postRequest : Users = Users(id: 0, firstName: firstName, lastName: lastName)
-            postData(user: postRequest, url: "\(workAround.myUrl)add")
+            postData(user: postRequest, url: "\(workAround.myUrl)add", workAround: workAround)
         }
     }
 }

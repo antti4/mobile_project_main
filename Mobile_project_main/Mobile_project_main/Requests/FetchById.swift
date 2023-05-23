@@ -8,7 +8,8 @@
 import Foundation
 
 func fetchDataById(workAround : WorkAround, url : String){
-    let myURL = URL(string : url)!
+    let trueUrl = url.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+    let myURL = URL(string : trueUrl)!
     let httpTask = URLSession.shared.dataTask(with: myURL) {
      (optionalData, response, error) in
         let jsonDecoder = JSONDecoder()

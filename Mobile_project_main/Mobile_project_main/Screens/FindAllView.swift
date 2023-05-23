@@ -13,6 +13,7 @@ struct FindAllView: View {
     var body: some View {
         if(workAround.notFound){
             Text("please wait")
+                .foregroundColor(.gray)
         }else{
             List{
                 ForEach(workAround.users!, id: \.firstName) { user in

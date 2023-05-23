@@ -11,6 +11,7 @@ import SwiftUI
 struct DeleteView: View {
     @ObservedObject var workAround = WorkAround()
     @State var bind : String = ""
+    @State var showToast : Bool = false
     var body: some View {
         VStack{
             TextField(

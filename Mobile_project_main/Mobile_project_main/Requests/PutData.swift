@@ -24,6 +24,9 @@ func updateData(workAround : WorkAround, url : String, user: Users){
             do {
                 let result = try jsonDecoder.decode(Users.self, from: optionalData!)
                     print(result)
+                    DispatchQueue.main.async {
+                        workAround.showToast = true
+                    }
             } catch {
                 print(error)
             }

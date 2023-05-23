@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct ContentView: View {
     @StateObject var workAround = WorkAround()
@@ -23,6 +24,7 @@ struct ContentView: View {
                     EditBackend(workAround: workAround)
                 default:
                     Text("welcome to users API! Let's get started")
+                        .foregroundColor(.gray)
                 }
                 Spacer()
                 HStack{
@@ -33,6 +35,9 @@ struct ContentView: View {
             }
             .padding(.leading, 10)
             .navigationBarTitle("Users", displayMode: .large)
+        }
+        .toast(isPresenting: $workAround.showToast){
+            AlertToast(type: .regular, title: "Success!")
         }
     }
 }

@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 func deleteData(workAround : WorkAround, url : String){
+    @State var showtoast : Bool = false
     var request = URLRequest(url: URL(string: url)!)
     request.httpMethod = "DELETE"
     let httpTask = URLSession.shared.dataTask(with: request) {
@@ -15,6 +17,9 @@ func deleteData(workAround : WorkAround, url : String){
         do {
             let result = try jsonDecoder.decode(Users.self, from: optionalData!)
                 print(result)
+                DispatchQueue.main.async {
+                    workAround.showToast = true
+                }
         } catch {
             print(error)
         }

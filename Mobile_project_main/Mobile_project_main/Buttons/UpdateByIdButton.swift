@@ -12,10 +12,14 @@ struct UpdateButton: View {
     @ObservedObject var workAround = WorkAround()
     
     var body: some View {
-        Button("Update user"){
+        Button{
             workAround.buttonNumber = 3
+        } label: {
+            Label("Modify", systemImage: "pencil.and.outline")
+                .foregroundColor(.gray)
+                .imageScale(.large)
         }
-        .padding()
         .frame(maxWidth: .infinity)
+        .padding([.trailing], 30)
     }
 }

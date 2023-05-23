@@ -13,13 +13,16 @@ struct FindAllButton: View {
     let myURL : String
     var body: some View {
         VStack {
-            Button("Search all"){
+            Button{
                 workAround.notFound = true
                 fetchData(workAround : workAround, url : myURL)
                 workAround.buttonNumber = 1
+            } label: {
+                Label("All", systemImage: "note.text")
+                    .foregroundColor(.gray)
+                    .imageScale(.large)
             }
             .frame(maxWidth: .infinity)
         }
-        .padding()
     }
 }

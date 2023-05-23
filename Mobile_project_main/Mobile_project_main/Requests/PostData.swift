@@ -6,7 +6,7 @@
 //
 
 import Foundation
-func postData(user:Users, url: String) {
+func postData(user:Users, url: String, workAround : WorkAround) {
         
         // server endpoint
         let endpoint = url
@@ -32,6 +32,9 @@ func postData(user:Users, url: String) {
                 do {
                     let result = try jsonDecoder.decode(Users.self, from: optionalData!)
                         print(result)
+                        DispatchQueue.main.async {
+                            workAround.showToast = true
+                        }
                 } catch {
                     print(error)
                 }
