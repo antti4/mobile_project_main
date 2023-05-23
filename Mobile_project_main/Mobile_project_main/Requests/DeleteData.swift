@@ -22,6 +22,9 @@ func deleteData(workAround : WorkAround, url : String){
                 }
         } catch {
             print(error)
+            DispatchQueue.main.async {
+                workAround.failedRequestToast = true
+            }
         }
     }
     httpTask.resume()

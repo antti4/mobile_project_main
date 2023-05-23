@@ -19,7 +19,7 @@ struct FindAllButton: View {
                 workAround.buttonNumber = 1
             } label: {
                 Label("All", systemImage: "note.text")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
                     .imageScale(.large)
             }
             .frame(maxWidth: .infinity)

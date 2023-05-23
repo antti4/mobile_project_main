@@ -42,5 +42,8 @@ func postData(user:Users, url: String, workAround : WorkAround) {
             httpTask.resume()
         }catch{
             print(error)
+            DispatchQueue.main.async {
+                workAround.failedRequestToast = true
+            }
         }
     }

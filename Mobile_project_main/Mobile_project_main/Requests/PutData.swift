@@ -29,10 +29,14 @@ func updateData(workAround : WorkAround, url : String, user: Users){
                     }
             } catch {
                 print(error)
+                DispatchQueue.main.async {
+                    workAround.failedRequestToast = true
+                }
             }
         }
         httpTask.resume()
     }catch{
         print(error)
+        
     }
 }

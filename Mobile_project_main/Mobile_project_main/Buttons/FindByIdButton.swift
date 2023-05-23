@@ -18,7 +18,7 @@ struct FindByIdButton: View {
             workAround.buttonNumber = 2
         } label: {
             Label("Search", systemImage: "magnifyingglass")
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
                 .imageScale(.large)
         }
         .frame(maxWidth: .infinity)

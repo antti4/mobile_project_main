@@ -14,6 +14,8 @@ class WorkAround : ObservableObject {
     @Published var notFound : Bool = true
     @Published var myUrl : String = "https://dummyjson.com/users/"
     @Published var showToast : Bool  = false
+    @Published var notFoundToast : Bool = false
+    @Published var failedRequestToast : Bool = false
     struct Result: Decodable  {
         let users : [Users]
     }

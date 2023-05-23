@@ -13,18 +13,28 @@ struct PostView: View {
     @State var firstName : String = ""
     @State var lastName : String  = ""
     var body: some View {
-        HStack{
+        VStack(alignment: .center){
             TextField("first name", text: $firstName)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
+                .padding(.vertical, 10)
+                .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+                .foregroundColor(.blue)
+                .padding(10)
             TextField("last name", text: $lastName)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
+                .padding(.vertical, 10)
+                .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+                .foregroundColor(.blue)
+                .padding(10)
+            Button("Post"){
+                let postRequest : Users = Users(id: 0, firstName: firstName, lastName: lastName)
+                postData(user: postRequest, url: "\(workAround.myUrl)add", workAround: workAround)
+            }
+            .padding(12)
+            .background(Color(red: 0, green: 0, blue: 0.5))
+            .foregroundColor(.teal)
+            .scaledToFit()
+            .clipShape(Capsule())
         }
+        .scaledToFill()
         .padding()
-        Button("Post"){
-            let postRequest : Users = Users(id: 0, firstName: firstName, lastName: lastName)
-            postData(user: postRequest, url: "\(workAround.myUrl)add", workAround: workAround)
-        }
     }
 }

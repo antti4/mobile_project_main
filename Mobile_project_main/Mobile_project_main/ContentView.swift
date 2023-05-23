@@ -24,7 +24,7 @@ struct ContentView: View {
                     EditBackend(workAround: workAround)
                 default:
                     Text("welcome to users API! Let's get started")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                 }
                 Spacer()
                 HStack{
@@ -38,6 +38,12 @@ struct ContentView: View {
         }
         .toast(isPresenting: $workAround.showToast){
             AlertToast(type: .regular, title: "Success!")
+        }
+        .toast(isPresenting: $workAround.notFoundToast){
+            AlertToast(type: .regular, title: "Didn't find any items")
+        }
+        .toast(isPresenting: $workAround.failedRequestToast){
+                AlertToast(type: .regular, title: "Request failed")
         }
     }
 }

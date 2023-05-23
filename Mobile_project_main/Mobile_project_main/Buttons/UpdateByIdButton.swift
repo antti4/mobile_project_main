@@ -16,7 +16,7 @@ struct UpdateButton: View {
             workAround.buttonNumber = 3
         } label: {
             Label("Modify", systemImage: "pencil.and.outline")
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
                 .imageScale(.large)
         }
         .frame(maxWidth: .infinity)

@@ -16,28 +16,31 @@ struct UpdateView: View {
     
     var body: some View {
         VStack{
-            TextField(
-                "place id",
-                text: $bindId
-            )
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
-            TextField(
-                "write first name",
-                text: $bindFName
-            )
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
-            TextField(
-                "write last name",
-                text: $bindLNanme
-            )
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1))
+            TextField("place id", text: $bindId)
+                .padding(.vertical, 10)
+                .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+                .foregroundColor(.blue)
+                .padding(10)
+            TextField("write first name", text: $bindFName)
+                .padding(.vertical, 10)
+                .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+                .foregroundColor(.blue)
+                .padding(10)
+            TextField("write last name", text: $bindLNanme)
+                .padding(.vertical, 10)
+                .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+                .foregroundColor(.blue)
+                .padding(10)
+            
             Button("update"){
                 let user : Users = Users(id: Int(bindId) ?? 0, firstName: bindFName, lastName: bindLNanme)
                 updateData(workAround: workAround, url: "\(workAround.myUrl)\(bindId)", user: user)
             }
+            .padding(12)
+            .background(Color(red: 0, green: 0, blue: 0.5))
+            .foregroundColor(.teal)
+            .scaledToFit()
+            .clipShape(Capsule())
         }
         .padding()
     }

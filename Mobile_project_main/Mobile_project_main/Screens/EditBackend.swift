@@ -13,14 +13,20 @@ struct EditBackend: View {
     var body: some View {
         NavigationStack{
             List{
-                NavigationLink("udate user"){
-                    UpdateView(workAround: workAround)
+                NavigationLink("update user"){
+                    Color(UIColor.secondarySystemBackground)
+                        .ignoresSafeArea()
+                        .overlay(UpdateView(workAround: workAround))
                 }
                 NavigationLink("delete user"){
-                    DeleteView(workAround: workAround)
+                    Color(UIColor.secondarySystemBackground)
+                        .ignoresSafeArea()
+                        .overlay(DeleteView(workAround: workAround))
                 }
                 NavigationLink("create user"){
-                    PostView(workAround: workAround)
+                    Color(UIColor.secondarySystemBackground)
+                        .ignoresSafeArea()
+                        .overlay(PostView(workAround: workAround))
                 }
             }
         }
